@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HydroSyne</title>
+  <style>
+    /* ----- Basic Reset & Fonts ----- */
+    body, html { margin:0; padding:0; font-family: 'Segoe UI', Tahoma, sans-serif; scroll-behavior: smooth; }
+    a { text-decoration: none; color: inherit; }
+    section { padding: 80px 20px; }
+    h1, h2, h3 { margin-bottom: 20px; }
+    p { margin-bottom: 15px; line-height: 1.6; }
+
+    /* ----- Navigation ----- */
+    nav { position: fixed; top: 0; width: 100%; background: #0a3d62; color: #fff; padding: 15px 20px; z-index: 1000; display: flex; justify-content: space-between; align-items: center; }
+    nav .logo { font-weight: bold; font-size: 1.5em; }
+    nav ul { list-style: none; display: flex; gap: 20px; }
+    nav ul li { display: inline; }
+    nav ul li a { color: #fff; font-weight: 500; }
+    nav ul li a:hover { text-decoration: underline; }
+
+    /* ----- Hero Section ----- */
+    #home { background: url('https://images.unsplash.com/photo-1581091215361-5fcf9d6b6a2e?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover; color: #fff; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    #home h1 { font-size: 3em; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+    #home p { font-size: 1.2em; max-width: 600px; text-shadow: 1px 1px 3px rgba(0,0,0,0.6); }
+    #home button { margin-top: 30px; padding: 12px 25px; font-size: 1em; background: #fbc531; color:#000; border:none; border-radius:5px; cursor:pointer; font-weight: bold; }
+    #home button:hover { background: #f1c40f; }
+
+    /* ----- Sections ----- */
+    section { max-width: 1000px; margin: auto; }
+    #about, #solutions, #team, #contact { background: #f4f4f4; margin-top: 50px; border-radius: 10px; }
+    section h2 { color: #0a3d62; text-align: center; }
+
+    /* ----- Cards ----- */
+    .card-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 30px; }
+    .card { background: #fff; padding: 20px; border-radius: 10px; flex: 1 1 250px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; }
+    .card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; margin-bottom: 10px; }
+
+    /* ----- Footer ----- */
+    footer { text-align: center; padding: 30px; background: #0a3d62; color: #fff; margin-top: 50px; }
+
+    /* ----- Forms ----- */
+    form { display: flex; flex-direction: column; gap: 15px; max-width: 400px; margin: auto; }
+    input, textarea { padding: 10px; border-radius: 5px; border: 1px solid #ccc; width: 100%; }
+    button.submit { background: #0097e6; color:#fff; border:none; padding: 12px; font-weight: bold; border-radius:5px; cursor:pointer; }
+    button.submit:hover { background: #0077c2; }
+
+    @media (max-width: 768px) {
+      .card-container { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">HydroSyne</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#solutions">Solutions</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home">
+    <h1>HydroSyne</h1>
+    <p>Intelligent, resilient water infrastructure for communities, municipalities, farms, and industries. Optimizing water management sustainably through innovative solutions.</p>
+    <button onclick="window.location.href='#contact'">Contact Us</button>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About HydroSyne</h2>
+    <p>HydroSyne provides cutting-edge water management solutions to improve efficiency, reduce waste, and ensure sustainable access to clean water. Our approach is data-driven, resilient, and forward-thinking.</p>
+    <p>We partner with municipalities, farms, industries, and communities to transform water networks without exposing sensitive infrastructure details.</p>
+  </section>
+
+  <!-- Solutions Section -->
+  <section id="solutions">
+    <h2>Our Solutions</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091012184-5f228f8a8e47?auto=format&fit=crop&w=200&q=80" alt="Smart Households">
+        <h3>Smart Households</h3>
+        <p>Early leak detection, water usage monitoring, and optimization for homes and small communities.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1593529467226-9b9a326df4d3?auto=format&fit=crop&w=200&q=80" alt="Municipal Water Systems">
+        <h3>Municipal Water Systems</h3>
+        <p>Efficient water distribution, network optimization, and reduced losses across city-wide systems.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1581091215363-60db38ff0d7e?auto=format&fit=crop&w=200&q=80" alt="Agriculture & Industry">
+        <h3>Agriculture & Industry</h3>
+        <p>Smart irrigation and industrial water management for sustainable operations.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+    <h2>Our Team</h2>
+    <div class="card-container">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a0?auto=format&fit=crop&w=200&q=80" alt="David - Founder">
+        <h3>David [Founder]</h3>
+        <p>Leading HydroSyne’s vision and strategy for intelligent water systems.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=200&q=80" alt="Jane - CTO">
+        <h3>Jane [CTO]</h3>
+        <p>Overseeing technological innovation, AI integration, and infrastructure intelligence.</p>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1595152772835-4b6a5a3e49c0?auto=format&fit=crop&w=200&q=80" alt="Alex - Operations">
+        <h3>Alex [Operations]</h3>
+        <p>Ensuring smooth implementation of water solutions and partner coordination.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out to learn more or discuss collaboration opportunities:</p>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit" class="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2026 HydroSyne. All rights reserved.
+  </footer>
+
+</body>
+</html>
